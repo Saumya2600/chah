@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To the Love of My Life</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(120deg, #ffafbd, #ffc3a0);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    .container {
+      text-align: center;
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    p {
+      font-size: 1.5em;
+      line-height: 1.6;
+      margin: 20px 0;
+      animation: fadeIn 3s ease-in-out;
+      color: #333;
+    }
+    .heart {
+      font-size: 5em;
+      color: red;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .letter {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      margin-top: 20px;
+    }
+    .button {
+      margin-top: 30px;
+    }
+    .button button {
+      padding: 15px 30px;
+      background: #ff6f61;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2em;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .button button:hover {
+      background: #e85b50;
+      transform: scale(1.05);
+    }
+    video {
+      display: none;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 800px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+    .show-video {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>To the Love of My Life</h1>
+    <div class="heart">❤️</div>
+    <div class="letter">
+      <p>
+        My dearest Chah,  
+        Words cannot express how much you mean to me. You are the light in my darkest days, the smile that brightens my mornings, and the dream I wish never to wake up from.  
+        Every moment talking with you feels like a magical journey, and every heartbeat of mine echoes your name.  
+        I am a fool for not giving you the time of day and making you feel less important. Truth is, it is a privilege for a loser like me to have such a wonderful and caring person in my life. Thank you for being the most beautiful part of my life.
+      </p>
+      <p>
+        I promise to cherish you, support you, and love you unconditionally, now and always. You are, and will always be, my everything.
+      </p>
+    </div>
+    <div class="button">
+      <button id="loveButton">I Love You Forever</button>
+    </div>
+    <video id="loveVideo" controls autoplay loop>
+      <source src="sam2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <script>
+    const button = document.getElementById('loveButton');
+    const video = document.getElementById('loveVideo');
+
+    button.addEventListener('click', () => {
+      video.classList.add('show-video'); // Show the video
+      video.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to the video
+    });
+  </script>
+</body>
+</html>

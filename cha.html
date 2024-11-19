@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Lovely Girlfriend</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">To My Beautiful Girlfriend</h1>
+        
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="C:\Users\user\Downloads\1728783153158.jpg" class="active" alt="Image 1">
+                <img src="C:\Users\user\Downloads\1728783153170.jpg" alt="Image 2">
+                <img src="C:\Users\user\Downloads\1728783153215.jpg" alt="Image 3">
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">❮</button>
+            <button class="next" onclick="moveSlide(1)">❯</button>
+        </div>
+
+        <p class="footer">Every moment with you is precious! 💖</p>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function moveSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-images img');
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+    </script>
+</body>
+</html>
